@@ -101,7 +101,7 @@ html {
     margin:25px auto;
   }
   header, #content, footer { 
-    background: rgba(0,128,128,.4); 
+    background: rgba(0,128,128,.1); 
     padding:25px;
     color:#FFFFFF; 
   }

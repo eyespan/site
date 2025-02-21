@@ -13,14 +13,26 @@
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
-  --primary: #121212;
+  --primary: #4299e1;
   --background: rgba(26, 32, 44, 0.95);
   --text: #f7fafc;
   --text-light: #a0aec0;
   --card-bg: rgba(45, 55, 72, 0.8);
   --border: #4a5568;
   --shadow: rgba(0, 0, 0, 0.3);
+
+  --heading-color: #e2e8f0; 
 }
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4{
+  color: var(--heading-color);
+  font-weight: 700; /* Ensure bold readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better contrast */
+}
+
 
 /* Base Styles */
 * {

@@ -93,7 +93,7 @@ p { margin-bottom: 1rem; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -303,7 +303,7 @@ footer {
   .nav-links {
     display: none;
     position: fixed;
-    top: 70px;
+    top: 90px;
     left: 0;
     right: 0;
     background: var(--background);
@@ -345,6 +345,6 @@ footer {
 
   /* Adjust main content to account for fixed navbar */
   main {
-    padding-top: 70px;
+    padding-top: 90px;
   }
 }

@@ -54,8 +54,7 @@ body::before {
           rgba(255, 255, 255, 0.95),
           rgba(255, 255, 255, 0.7)
       ),
-      url('background.jpg'),
-      url('background-eyespan.jpg');
+      url('background.jpg');
   background-position: center;
   background-size: cover;
   background-blend-mode: lighten;
@@ -69,8 +68,7 @@ body::before {
           rgba(26, 32, 44, 0.95),
           rgba(26, 32, 44, 0.7)
       ),
-      url('background.jpg'),
-      url('background-eyespan.jpg');
+      url('background.jpg');
 }
 
 /* Typography */

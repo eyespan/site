@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenu.addEventListener('click', () => {
         navLinks.classList.toggle('show');
-        // Animate hamburger to X
         mobileMenu.classList.toggle('active');
     });
 
@@ -49,24 +48,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Active link highlighting
+    // Improved active link highlighting with Intersection Observer
     const sections = document.querySelectorAll('section');
     const navLinksArray = document.querySelectorAll('.nav-links a');
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - 150) {
-                current = section.getAttribute('id');
+    const options = {
+        rootMargin: '-50% 0px -50% 0px', // Only consider middle 50% of viewport
+        threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.getAttribute('id');
+                navLinksArray.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').slice(1) === currentId) {
+                        link.classList.add('active');
+                    }
+                });
             }
         });
+    };
 
-        navLinksArray.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
+    const observer = new IntersectionObserver(observerCallback, options);
+    sections.forEach(section => observer.observe(section));
+
+    // Add click handlers for smooth scrolling
+    navLinksArray.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').slice(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                // Add offset for fixed navbar
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });

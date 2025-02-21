@@ -345,6 +345,6 @@ footer {
 
   /* Adjust main content to account for fixed navbar */
   main {
-    padding-top: 90px;
+    padding-top: 100px;
   }
 }

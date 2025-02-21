@@ -1,3 +1,4 @@
+/* Theme Variables */
 :root {
   --primary: #02608B;
   --accent: #EF6D3D;
@@ -10,6 +11,7 @@
   --transition: all 0.3s ease;
 }
 
+/* Dark Theme Variables */
 [data-theme="dark"] {
   --primary: #4299e1;
   --background: rgba(26, 32, 44, 0.95);
@@ -20,6 +22,7 @@
   --shadow: rgba(0, 0, 0, 0.3);
 }
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -70,71 +73,6 @@ body::before {
       url('background-eyespan.jpg');
 }
 
-/* Rest of your existing CSS... */
-
-/* Adjust card and section backgrounds for transparency */
-.navbar {
-  background: var(--background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.service-card,
-.expertise-item,
-.client-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.section {
-  position: relative;
-  z-index: 1;
-}
-
-/* Keep the rest of your existing CSS the same... */
-
-:root {
-  --primary: #02608B;
-  --accent: #EF6D3D;
-  --background: #ffffff;
-  --text: #2d3748;
-  --text-light: #718096;
-  --card-bg: #f7fafc;
-  --border: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-}
-
-/* Dark mode variables */
-[data-theme="dark"] {
-  --primary: #4299e1;
-  --background: #1a202c;
-  --text: #f7fafc;
-  --text-light: #a0aec0;
-  --card-bg: #2d3748;
-  --border: #4a5568;
-  --shadow: rgba(0, 0, 0, 0.3);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--background);
-  transition: var(--transition);
-}
-
 /* Typography */
 h1, h2, h3, h4 {
   line-height: 1.2;
@@ -164,6 +102,8 @@ p { margin-bottom: 1rem; }
 
 .section {
   padding: 6rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* Navigation */
@@ -172,6 +112,8 @@ p { margin-bottom: 1rem; }
   top: 0;
   width: 100%;
   background: var(--background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px var(--shadow);
   z-index: 1000;
 }
@@ -231,6 +173,8 @@ p { margin-bottom: 1rem; }
 
 .service-card {
   background: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -258,6 +202,8 @@ p { margin-bottom: 1rem; }
 
 .expertise-item {
   background: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 0.5rem;
 }
@@ -290,6 +236,8 @@ p { margin-bottom: 1rem; }
 
 .client-card {
   background: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   padding: 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -337,65 +285,6 @@ p { margin-bottom: 1rem; }
   color: var(--accent);
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.mobile-menu span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: var(--text);
-  margin: 5px 0;
-  transition: var(--transition);
-}
-
-/* Footer */
-footer {
-  background: var(--card-bg);
-  padding: 2rem 0;
-  text-align: center;
-  margin-top: 4rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--background);
-      padding: 1rem;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 2px 4px var(--shadow);
-  }
-
-  .nav-links.show {
-      display: flex;
-  }
-
-  .mobile-menu {
-      display: block;
-  }
-
-  .section {
-      padding: 4rem 0;
-  }
-
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-}
-
-/* ... (previous CSS remains the same until mobile menu styles) ... */
-
 /* Mobile Menu Button */
 .mobile-menu {
   display: none;
@@ -428,15 +317,27 @@ footer {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* Footer */
+footer {
+  background: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
       display: none;
       position: fixed;
-      top: 70px; /* Height of navbar */
+      top: 70px;
       left: 0;
       right: 0;
       background: var(--background);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       padding: 2rem;
       flex-direction: column;
       align-items: center;
@@ -476,5 +377,3 @@ footer {
       padding-top: 70px;
   }
 }
-
-/* ... (rest of the CSS remains the same) ... */

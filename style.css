@@ -14,13 +14,12 @@
 /* Dark Theme Variables */
 [data-theme="dark"] {
   --primary: #4299e1;
-  --background: rgba(26, 32, 44, 0.95);
+  --background: rgba(26, 32, 44);
   --text: #f7fafc;
   --text-light: #a0aec0;
   --card-bg: rgba(45, 55, 72, 0.8);
   --border: #4a5568;
   --shadow: rgba(0, 0, 0, 0.3);
-
   --heading-color: #e2e8f0; 
 }
 

@@ -53,7 +53,7 @@ body::before {
       url('background-eyespan.jpg');
   background-position: center;
   background-size: cover;
-  background-blend-mode: normal;
+  background-blend-mode: overlay;
   z-index: -1;
   transition: var(--transition);
 }

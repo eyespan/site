@@ -57,7 +57,7 @@ body::before {
       url('background.jpg');
   background-position: center;
   background-size: cover;
-  background-blend-mode: lighten;
+  background-blend-mode: normal;
   z-index: -1;
   transition: var(--transition);
 }

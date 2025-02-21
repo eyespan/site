@@ -23,6 +23,7 @@
   --heading-color: #e2e8f0; 
 }
 
+[data-theme="dark"] html,
 [data-theme="dark"] body {
   background-color: var(--background);
   color: var(--text);

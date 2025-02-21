@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set initial theme based on user preference
   if (prefersDarkScheme.matches) {
-      document.body.setAttribute('data-theme', 'dark');
+      document.setAttribute('data-theme', 'dark');
       themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
   }
 
   themeToggle.addEventListener('click', () => {
-      const currentTheme = document.body.getAttribute('data-theme');
+      const currentTheme = document.getAttribute('data-theme');
       if (currentTheme === 'dark') {
           document.body.removeAttribute('data-theme');
           themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
       } else {
-          document.body.setAttribute('data-theme', 'dark');
+          document.setAttribute('data-theme', 'dark');
           themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
   });

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial theme based on user preference
     if (prefersDarkScheme.matches) {
         document.body.setAttribute('data-theme', 'dark');
+        document.body.style.backgroundColor = '#1a202c';
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
 
@@ -13,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentTheme = document.body.getAttribute('data-theme');
         if (currentTheme === 'dark') {
             document.body.removeAttribute('data-theme');
+            document.body.style.backgroundColor = '#ffffff';
             themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         } else {
             document.body.setAttribute('data-theme', 'dark');
+            document.body.style.backgroundColor = '#1a202c';
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
     });

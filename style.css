@@ -2,7 +2,7 @@
 :root {
   --primary: #02608B;
   --accent: #EF6D3D;
-  --background: rgba(255, 255, 255, 0.95);
+  --background: #ffffff;
   --text: #2d3748;
   --text-light: #718096;
   --card-bg: rgba(247, 250, 252, 0.8);
@@ -12,31 +12,16 @@
 }
 
 /* Dark Theme Variables */
-[data-theme="dark"] {
+body[data-theme="dark"] {
   --primary: #4299e1;
-  --background: rgb(26, 32, 44);
+  --background: #1a202c;
   --text: #f7fafc;
   --text-light: #a0aec0;
   --card-bg: rgba(45, 55, 72, 0.8);
   --border: #4a5568;
   --shadow: rgba(0, 0, 0, 0.3);
-  --heading-color: #e2e8f0; 
+  --heading-color: #e2e8f0;
 }
-
-[data-theme="dark"] body {
-  background-color: var(--background);
-  color: var(--text);
-}
-
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4{
-  color: var(--heading-color);
-  font-weight: 700; /* Ensure bold readability */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better contrast */
-}
-
 
 /* Base Styles */
 * {
@@ -47,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: none;
 }
 
 body {
@@ -55,9 +41,8 @@ body {
   color: var(--text);
   position: relative;
   min-height: 100vh;
+  background-color: var(--background);
 }
-
-/* Background Setup */
 
 /* Typography */
 h1, h2, h3, h4 {
@@ -316,43 +301,43 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
-      display: none;
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background: var(--background);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 2rem;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      box-shadow: 0 2px 4px var(--shadow);
-      transition: all 0.3s ease-in-out;
-      opacity: 0;
-      transform: translateY(-10px);
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
   }
 
   .nav-links.show {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav-links a {
-      font-size: 1.2rem;
-      width: 100%;
-      text-align: center;
-      padding: 0.75rem;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
   }
 
   .mobile-menu {
-      display: block;
+    display: block;
   }
 
   .section {
-      padding: 4rem 0;
+    padding: 4rem 0;
   }
 
   h1 { font-size: 2.5rem; }
@@ -360,6 +345,6 @@ footer {
 
   /* Adjust main content to account for fixed navbar */
   main {
-      padding-top: 70px;
+    padding-top: 70px;
   }
 }

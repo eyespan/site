@@ -1,116 +1,142 @@
-<!doctype html>
-<html>
-  <head>
-    <!-- Page setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <title>Eyespan</title>
+    <title>Eyespan - Cloud & DevOps Consultancy</title>
     <meta name="description" content="Cloud and DevOps Consultancy">
     <meta name="author" content="Eyespan Limited">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.png">
-  
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
     
-  </head>
-  
-  <body>
-
-    <header id="header">
-      <img src="eyespanlogo.png">
-      <h1>Eyespan Limited</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-      <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#clients">clients</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>                 
-    </header>
-   
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
-          
-          <div id="home" class="content-region hide">
-            <h2>Home</h2>
-            <p>
-                We are experienced and certified Cloud and DevOps Practitioners helping organisations with cloud adoption and migration. Our Specility includes:
-                <li>Cloud Migration and Adoption</li>
-                <li>DevOps</l>
-                <li>Infrastruture</li>
-                <li>Security</li>
-                <li>Architecture</li>
-                <li>Automation</li>
-                <li>Networking</li>
-                <li>Serverless Workloads</li>
-                <li>API Management</li>
-            </p>
-          </div>
-          
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-               Eyespan Limited has been In the IT consultancy business since 2009. We specialise in Cloud Adoption, DevOps, Architecture, Software Development and Automation.
-            </p>
-          </div>
-
-          <div id="clients" class="content-region hide">
-            <h2>Clients</h2>
-            <p>
-             Eyespan Limited has develived a varitety of projects for Finanancial, Insurance, Health Care, Technology, Automotive, Media and Music sectors for the last 13 years.</p>
-            </p>Our Client portoflio includes: </p>
-           
-            <li>Credit Suisse AG</li>
-            <li>Cognizant</li>
-            <li>LLOYDS Banking Group</li>
-            <li>Wipro</li>
-            <li>Direct Line Group</li>
-            <li>PPL</li>
-            <li>Ensono</li>
-            <li>Airwalk Consulting</li>
-            <li>HSBC</li>
-            <li>NHS</li>
-            <li>The Server Labs</li>
-            <li>Sky</li>
-            <li>INTERNATIONAL COMMISSION for the CONSERVATION of ATLANTIC TUNAS (iccat.int)</li>
-            <li>Fundación Laboral de la Construcción(idvalida.net)</li>
-            <li>MHP A Porche Company - Subsidary of Porsche AG</li>
-            <li>Genomics England</li>
-        </p>
-          </div>
-          
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              email: admin@eyespan.co.uk 
-            </p>
-            <p>
-            </p>
-          </div>
-          
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="eyespanlogo.png" alt="Eyespan Logo">
+                <span>Eyespan</span>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <footer>  
-     &copy; 2009 - 2023 Eyespan Limted
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <h1>Cloud & DevOps Excellence</h1>
+                <p class="lead">Transforming businesses through expert cloud solutions and DevOps practices since 2009.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Migration</h3>
+                        <p>Seamless cloud adoption strategies</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>DevOps</h3>
+                        <p>Streamlined development operations</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security</h3>
+                        <p>Robust security implementations</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Infrastructure</h3>
+                        <p>Scalable infrastructure solutions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Eyespan Limited has been delivering IT consultancy excellence since 2009. We specialize in Cloud Adoption, DevOps, Architecture, Software Development, and Automation, helping organizations transform their digital infrastructure.</p>
+                
+                <div class="expertise-list">
+                    <div class="expertise-item">
+                        <h4>Cloud & Infrastructure</h4>
+                        <ul>
+                            <li>Cloud Migration</li>
+                            <li>Infrastructure as Code</li>
+                            <li>Serverless Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="expertise-item">
+                        <h4>DevOps & Automation</h4>
+                        <ul>
+                            <li>CI/CD Implementation</li>
+                            <li>Process Automation</li>
+                            <li>Configuration Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="section">
+            <div class="container">
+                <h2>Our Clients</h2>
+                <p>We've delivered transformative solutions across various sectors including Financial, Insurance, Healthcare, Technology, Automotive, Media, and Music.</p>
+                
+                <div class="clients-grid">
+                    <div class="client-card">Credit Suisse AG</div>
+                    <div class="client-card">LLOYDS Banking Group</div>
+                    <div class="client-card">Direct Line Group</div>
+                    <div class="client-card">HSBC</div>
+                    <div class="client-card">NHS</div>
+                    <div class="client-card">Sky</div>
+                    <div class="client-card">Genomics England</div>
+                    <div class="client-card">MHP - A Porsche Company</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Ready to transform your business? Let's discuss how we can help.</p>
+                        <a href="mailto:admin@eyespan.co.uk" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            admin@eyespan.co.uk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2009 - 2024 Eyespan Limited</p>
+        </div>
     </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

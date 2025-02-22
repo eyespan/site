@@ -105,7 +105,7 @@ p { margin-bottom: 1rem; }
 }
 
 .logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
 }
 
@@ -341,7 +341,7 @@ footer {
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: rgb(102, 179, 238);
+  background: #02577a;
   color: white;
   text-decoration: none;
   border-radius: 0.5rem;

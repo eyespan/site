@@ -23,6 +23,12 @@ body[data-theme="dark"] {
   --heading-color: #e2e8f0;
 }
 
+
+/* If the logo is a path in SVG */
+body[data-theme="dark"] .logo svg path {
+  fill: #ffffff;  /* or var(--text) */
+}
+
 /* Base Styles */
 * {
   margin: 0;
